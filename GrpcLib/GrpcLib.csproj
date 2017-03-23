@@ -55,15 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HelloWorld.cs" />
+    <Compile Include="HelloWorldGrpc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="generate_protos.bat" />
     <None Include="packages.config" />
+    <None Include="protos\HelloWorld.proto" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="protos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.2.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.2.0\build\net45\Grpc.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

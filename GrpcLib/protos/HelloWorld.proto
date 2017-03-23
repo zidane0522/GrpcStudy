@@ -1,0 +1,23 @@
+﻿syntax="proto3";
+
+package HelloWorld;
+service GrpcLib
+{
+rpc SayHello(HelloRequest) returns (HelloReply){}
+
+rpc SayHelloAgain(HelloRequest) returns (stream HelloReply){}
+
+rpc SayHelloThree(stream HelloRequest) returns (HelloReply){}
+
+rpc SayHelloFour(stream HelloRequest) returns (stream HelloReply){}
+}
+
+message HelloRequest
+{
+string name=1;
+}
+
+message HelloReply
+{
+string message=1;
+}
